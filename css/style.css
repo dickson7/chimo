@@ -2,7 +2,7 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-
+     font-family: Arial,serif;;
 }
 
 nav{
@@ -10,7 +10,6 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 10vh;
-    font-family: sans-serif;
     background-color:  rgb(22, 22, 22);
 }
 
@@ -73,11 +72,53 @@ nav{
     color: white;
     text-align: center;
 }
+
 h1{
-    transition: color 0.1s ease-in,background-color 0.1s ease-in;
+    font-size: 70px;
 }
 
+.title p{
+    display: inline;
+    font-size: 20px;
+    line-height: 2;
+    background-color: rgba(22, 22, 22, 0.4);
+    padding: 10px;
+}
+.fadeIn{
+    animation: fadeIn 3s both;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
 
+.fadeInDown{
+    animation: fadeInDown 1s both;
+}
+@keyframes fadeInDown{
+    from{
+        transform: translate3d(0, -100%, 0);
+    }
+    to{
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp{
+    animation: fadeInUp 1s both;
+}
+@keyframes fadeInUp{
+    from{
+        transform: translate3d(0, 100%, 0);
+    }
+    to{
+        transform: translate3d(0,0,0);
+    }
+}
 
 .history{
     display: flex;
@@ -170,4 +211,11 @@ footer{
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+@media (max-width: 600px){
+   h1{
+       font-size: 40px;
+   }
 }
